@@ -6,7 +6,7 @@
 	<version>0.0.2-SNAPSHOT</version>
 	<name>metrics-zabbix</name>
 	<description>Metrics zabbix adapter for reporting and monitor metrics with zabbix</description>
-	<url />
+	<url>https://github.com/janramm87/metrics-zabbix</url>
 	<licenses>
 		<license>
 			<name>The MIT License</name>
