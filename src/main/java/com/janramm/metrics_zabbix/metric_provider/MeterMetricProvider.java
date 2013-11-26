@@ -21,7 +21,7 @@ public class MeterMetricProvider implements MetricsProvider {
 
   @Override
   public Object getValue(MetricsKey mKey) throws MetricsException {
-    TimeBasedValueKeys meterValueKey = TimeBasedValueKeys.valueOf(mKey.getKey());
+    TimeBasedValueKeys meterValueKey = TimeBasedValueKeys.valueOf(mKey.getKey().toUpperCase());
     switch (meterValueKey) {
       case COUNT:
         return meter.getCount();
