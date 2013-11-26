@@ -1,4 +1,5 @@
 package com.janramm.metrics_zabbix.metric_provider;
+
 import com.codahale.metrics.Histogram;
 import com.codahale.metrics.Snapshot;
 import com.janramm.metrics_zabbix.zabbix_key_enums.SnapshotValueKeys;
@@ -7,6 +8,11 @@ import com.quigley.zabbixj.metrics.MetricsKey;
 import com.quigley.zabbixj.metrics.MetricsProvider;
 
 
+/**
+ * Metrics Zabbix adapter for the {@link com.codahale.metrics.Histogram} implementation
+ * @author jan.ramm
+ *
+ */
 public class HistogramMetricProvider implements MetricsProvider {
   private final Histogram histogram;
 

@@ -1,4 +1,5 @@
 package com.janramm.metrics_zabbix.metric_provider;
+
 import com.codahale.metrics.Meter;
 import com.janramm.metrics_zabbix.zabbix_key_enums.TimeBasedValueKeys;
 import com.quigley.zabbixj.metrics.MetricsException;
@@ -6,6 +7,11 @@ import com.quigley.zabbixj.metrics.MetricsKey;
 import com.quigley.zabbixj.metrics.MetricsProvider;
 
 
+/**
+ * Metrics Zabbix adapter for the {@link com.codahale.metrics.Meter} implementation
+ * @author jan.ramm
+ *
+ */
 public class MeterMetricProvider implements MetricsProvider {
   private final Meter meter;
 

@@ -1,4 +1,5 @@
 package com.janramm.metrics_zabbix.metric_provider;
+
 import com.codahale.metrics.Snapshot;
 import com.codahale.metrics.Timer;
 import com.janramm.metrics_zabbix.zabbix_key_enums.SnapshotValueKeys;
@@ -8,16 +9,17 @@ import com.quigley.zabbixj.metrics.MetricsKey;
 import com.quigley.zabbixj.metrics.MetricsProvider;
 
 
+/**
+ * Metrics Zabbix adapter for the {@link com.codahale.metrics.Timer} implementation
+ * @author jan.ramm
+ *
+ */
 public class TimerMetricProvider implements MetricsProvider {
   private final Timer timer;
-
-
 
   public TimerMetricProvider(Timer timer) {
     this.timer = timer;
   }
-
-
 
   @Override
   public Object getValue(MetricsKey mKey) throws MetricsException {

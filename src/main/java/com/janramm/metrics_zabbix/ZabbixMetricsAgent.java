@@ -1,4 +1,5 @@
 package com.janramm.metrics_zabbix;
+
 import com.codahale.metrics.Counter;
 import com.codahale.metrics.Gauge;
 import com.codahale.metrics.Histogram;
@@ -13,7 +14,12 @@ import com.janramm.metrics_zabbix.metric_provider.MeterMetricProvider;
 import com.janramm.metrics_zabbix.metric_provider.TimerMetricProvider;
 import com.quigley.zabbixj.agent.ZabbixAgent;
 
-
+/**
+ * This class is a MetricRegistryListener and hooks up the Zabbix agent with the Metrics-Measures.
+ * When a Metric is added the Metric gets registered to the Zabbix agent.
+ * @author jan.ramm
+ *
+ */
 public class ZabbixMetricsAgent implements MetricRegistryListener {
   private final ZabbixAgent agent;
   private final MetricRegistry metrics;
@@ -24,9 +30,20 @@ public class ZabbixMetricsAgent implements MetricRegistryListener {
     this.agent = agent;
   }
 
-  public void start() throws Exception {
-    agent.start();
-    metrics.addListener(this);
+  /**
+   * Register this agent as metrics listener in order to get all added metrics.
+   * This method should be called, before any metric is added otherwise the metrics won't get reported to zabbix
+   */
+  public void start() {
+    this.metrics.addListener(this);
+  }
+
+
+  /**
+   * Removes this agent as metrics listener
+   */
+  public void stop() {
+    this.metrics.removeListener(this);
   }
 
 
