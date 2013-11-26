@@ -49,20 +49,20 @@ In order to monitor that counter we have to integrate some source code and have 
 ### Zabbix configuration: ###
 * create a host called macbook-jramm
 * create an item with the following configuration:
-  * test.test (metricname.metrickey)
+  * test.test (metricname.metric-key)
   * Zabbix agent (active)
     
 #### MetricKeys ####
-The supported metric keys depends on the metric type
+The supported metric-keys depends on the metric type
 
 ##### Counter #####
-any metrickey specified will return the current count
+any metric-key specified will return the current count
 
 ##### Gauge #####
-any metrickey specified will return the current count
+any metric-key specified will return the current count
 
 ##### Histogram #####
-supported metrickeys:
+supported metric-keys:
 
     MAX,
     MIN,
@@ -77,7 +77,7 @@ supported metrickeys:
     COUNT
 
 ##### Meter #####
-supported metrickeys:
+supported metric-keys:
 
     MEAN_RATE,
     ONE_MINUTE_RATE,
@@ -86,7 +86,7 @@ supported metrickeys:
     COUNT
     
 ##### Timer #####
-supported metrickeys:
+supported metric-keys:
   
     MEAN_RATE,
     ONE_MINUTE_RATE,
