@@ -3,7 +3,7 @@
 	<groupId>com.janramm</groupId>
 	<artifactId>metrics-zabbix</artifactId>
 	<packaging>jar</packaging>
-	<version>0.0.2-SNAPSHOT</version>
+	<version>0.0.1-SNAPSHOT</version>
 	<name>metrics-zabbix</name>
 	<description>Metrics zabbix adapter for reporting and monitor metrics with zabbix</description>
 	<url>https://github.com/janramm87/metrics-zabbix</url>
